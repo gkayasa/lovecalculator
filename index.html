@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Section 1: Introduction -->
+        <div id="intro-section" class="section active">
+            <h1 class="text-5xl font-bold text-gray-800 mb-8">Love Calculator</h1>
+            <p class="text-lg text-gray-600 mb-8">Discover your compatibility!</p>
+            <button id="start-btn" class="btn">Start</button>
+        </div>
+
+        <!-- Section 2: Input Form -->
+        <div id="input-section" class="section">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Enter Your Names</h2>
+            <div class="mb-4">
+                <label for="your-name" class="block text-gray-700 text-left text-lg font-medium mb-2">Your Name:</label>
+                <input type="text" id="your-name" placeholder="E.g., John" class="focus:ring-2 focus:ring-offset-2">
+            </div>
+            <div class="mb-6">
+                <label for="partner-name" class="block text-gray-700 text-left text-lg font-medium mb-2">Partner's Name:</label>
+                <input type="text" id="partner-name" placeholder="E.g., Jane" class="focus:ring-2 focus:ring-offset-2">
+            </div>
+            <button id="calculate-btn" class="btn">Calculate Love</button>
+        </div>
+
+        <!-- Section 3: Loading Animation -->
+        <div id="loading-section" class="section">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Calculating...</h2>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <p id="percentage-display" class="percentage-text">0%</p>
+        </div>
+
+        <!-- Section 4: Results -->
+        <div id="results-section" class="section">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Your Love Score!</h2>
+            <p id="result-percentage" class="result-percentage">0%</p>
+            <p id="names-display" class="names-display-text"></p>
+            <p id="result-message" class="result-message">Let's see what the stars say...</p>
+            <button id="recalculate-btn" class="btn">Recalculate</button>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

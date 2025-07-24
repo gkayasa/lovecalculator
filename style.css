@@ -1,0 +1,162 @@
+/* Custom styles for the app */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Warm gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars due to animations */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 2rem; /* Reduced padding from 2.5rem */
+    max-width: 90%;
+    width: 420px; /* Reduced fixed width from 500px */
+    text-align: center;
+    transition: all 0.5s ease-in-out; /* Smooth transitions for section changes */
+    position: relative;
+    overflow: hidden; /* Hide overflow for sections */
+}
+
+.section {
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.7s ease-out forwards; /* Fade in animation */
+    padding: 1rem 0; /* Padding for sections */
+}
+
+.section.active {
+    display: block; /* Show active section */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 100%;
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff7e5f;
+    box-shadow: 0 0 0 3px rgba(255, 126, 95, 0.3);
+}
+
+/* Button styling */
+.btn {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+    display: inline-block; /* For centering */
+}
+
+.btn:hover {
+    background-color: #e66a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 126, 95, 0.6);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(255, 126, 95, 0.3);
+}
+
+/* Loading bar styling */
+.progress-bar-container {
+    width: 80%;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    height: 25px;
+    margin: 2rem auto 1rem;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #a8e063, #56ab2f); /* Green gradient */
+    border-radius: 15px;
+    transition: width 0.4s ease-out;
+}
+
+.percentage-text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 1rem;
+}
+
+/* Result section styling */
+.result-percentage {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ff7e5f;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.75rem;
+}
+
+.names-display-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.result-message {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding: 1.5rem; /* Further reduced padding for small screens */
+        border-radius: 15px;
+        width: 95%; /* Allow it to take more width on very small screens */
+    }
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+    }
+    input[type="text"] {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    .percentage-text {
+        font-size: 1.8rem;
+    }
+    .result-percentage {
+        font-size: 2.8rem;
+    }
+    .names-display-text {
+        font-size: 1.5rem;
+    }
+    .result-message {
+        font-size: 1.1rem;
+    }
+}
